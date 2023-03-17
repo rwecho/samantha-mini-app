@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { View, Text, Button, Image } from '@tarojs/components'
 import { useEnv, useNavigationBar, useModal, useToast } from 'taro-hooks'
+import Taro from '@tarojs/taro'
 import logo from './hook.png'
-
 import './index.scss'
 
 const Index = () => {
@@ -38,10 +38,13 @@ const Index = () => {
       <Button className='button' onClick={() => setTitle('Taro Hooks Nice!')}>
         设置标题2
       </Button>
-      <Button className='button' onClick={handleModal}>
+      <Button plain className='button' type='primary' onClick={handleModal}>
         使用Modal
       </Button>
 
+      <Button onClick={() => Taro.redirectTo({ url: '/pages/chat/index' })}>
+        进入聊天界面
+      </Button>
       <View></View>
 
       <View className='at-icon at-icon-settings'></View>

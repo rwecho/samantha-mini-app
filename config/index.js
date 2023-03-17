@@ -1,3 +1,5 @@
+import path from "path";
+
 const config = {
   projectName: "samanhta-mini-app",
   date: "2023-3-16",
@@ -58,7 +60,14 @@ const config = {
       },
     },
 
+    devServer: {
+      port: 10086,
+      host: '192.168.2.10',
+    }
   },
+  alias: {
+    "@": path.resolve(__dirname, "..", "src"),
+  }
 };
 
 module.exports = function (merge) {

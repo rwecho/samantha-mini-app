@@ -36,11 +36,15 @@ const Index = () => {
         <Text className='note'>{env}</Text>
       </View>
       <Button className='button' onClick={() => setTitle('Taro Hooks Nice!')}>
-        设置标题
+        设置标题2
       </Button>
       <Button className='button' onClick={handleModal}>
         使用Modal
       </Button>
+
+      <View></View>
+
+      <View className='at-icon at-icon-settings'></View>
     </View>
   )
 }
